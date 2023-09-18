@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets";
+import icon from "../images/icon.png";
+import Links from "./Links.astro";
+---
+
+<div class="wrapper">
+  <div class="profile">
+    <div class="icon">
+      <Image src={icon} width={150} alt="Profile Icon" />
+    </div>
+    <div>
+      <h1 class="name">Nero Nakamichi</h1>
+      <div class="summary">
+        <p>I'm a software engineer</p>
+      </div>
+    </div>
+    <Links />
+  </div>
+
+  <style lang="scss">
+    .wrapper {
+      min-height: calc(
+        100vh - var(--frame-width) * 2 - var(--frame-padding) * 2
+      );
+      display: flex;
+      align-items: center;
+    }
+
+    .profile {
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+      text-align: center;
+      margin: auto;
+      color: var(--color-text);
+      margin: auto;
+      padding-bottom: 5rem;
+    }
+
+    .icon {
+      background-size: cover;
+      // margin-right: 1.5rem;
+
+      img {
+        border-radius: 50%;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .name {
+      // font-family: Montserrat, sans-serif;
+      font-size: 2.2rem;
+      // font-weight: 700;
+      // font-weight: bold;
+      line-height: 1;
+      margin: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    .summary {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+
+      p {
+        margin: 0;
+        opacity: 0.9;
+
+        &:not(:last-child) {
+          margin-bottom: 1em;
+        }
+      }
+    }
+  </style>
+</div>

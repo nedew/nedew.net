@@ -1,0 +1,26 @@
+---
+
+---
+
+<div class="frame">
+  <div class="contents">
+    <slot />
+  </div>
+</div>
+<style>
+  .frame {
+    background-color: var(--color-bg);
+    box-sizing: border-box;
+    border: solid;
+    border-color: var(--color-primary);
+    border-width: var(--frame-width);
+    min-height: 100dvh;
+    width: 100vw;
+    padding: var(--frame-padding);
+  }
+
+  .contents {
+    /* background-color: #fff;
+    margin: 20px; */
+  }
+</style>
